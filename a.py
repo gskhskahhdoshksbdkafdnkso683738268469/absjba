@@ -15,6 +15,9 @@ def aaa():
 def aa():
   ap.run(host="0.0.0.0")
 
+def bb():
+  r.get('https://hdiahdisbn7383692649.onrender.com/')
+
 ax = Thread(target=aa)
 ax.start()
 
