@@ -17,7 +17,8 @@ def aa():
 
 def bb():
   while True:
-    r.get('https://hdiahdisbn7383692649.onrender.com/')
+    r.get('https://hdiahdisbn7383692649.onrender.com')
+    r.get('https://hskshskajka739362858.onrender.com')
 
 ax = Thread(target=aa)
 ax.start()
