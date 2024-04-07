@@ -15,7 +15,7 @@ def aaa():
 def aa():
   ap.run(host="0.0.0.0")
 
-ax = Thread(aa)
+ax = Thread(target=aa)
 ax.start()
 
 async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
