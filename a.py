@@ -15,16 +15,10 @@ def aaa():
 def aa():
   ap.run(host="0.0.0.0")
 
-def bb():
-  while True:
-    r.get('https://hdiahdisbn7383692649.onrender.com')
-    r.get('https://hskshskajka739362858.onrender.com')
 
 ax = Thread(target=aa)
 ax.start()
 
-bx = Thread(target=bb)
-bx.start()
 
 async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f'Hello {update.effective_user.first_name}')
