@@ -31,7 +31,7 @@ async def start(update, context):
     keyboard = [['Button 3', 'Button 2','aa'], ['Button 3', 'Button 4']]
 
     # Create a ReplyKeyboardMarkup object
-    reply_markup = ReplyKeyboardMarkup(keyboard,one_time_keyboard=True)
+    reply_markup = ReplyKeyboardMarkup(keyboard,resize_keyboard=True)
 
     # Send a message with the keyboard
     await update.message.reply_text('Choose a button:', reply_markup=reply_markup)
