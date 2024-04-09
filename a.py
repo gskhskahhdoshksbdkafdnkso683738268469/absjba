@@ -36,7 +36,7 @@ async def start(update, context):
     # Send a message with the keyboard
     await update.message.reply_text('Choose a button:', reply_markup=reply_markup)
 
-app = ApplicationBuilder().token("6305519973:AAE3EIcBD5HPdAJ0ae5J6vlvsd-9LwMHWsQ").build()
+app = ApplicationBuilder().token("6305519973:AAHC8f6IIw_rHUFPNo055cPGR8gGMToqbIY").build()
 
 app.add_handler(CommandHandler("start", start))
 
