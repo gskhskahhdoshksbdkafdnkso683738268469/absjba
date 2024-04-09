@@ -1,4 +1,4 @@
-from telegram import Update,ReplyKeyboardMarkup
+from telegram import Update,ReplyKeyboardMarkup,Filters
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import requests as r
 from flask import Flask
@@ -38,7 +38,7 @@ async def start(update, context):
 
 app = ApplicationBuilder().token("6305519973:AAHC8f6IIw_rHUFPNo055cPGR8gGMToqbIY").build()
 
-app.add_handler(CommandHandler("start", start))
+app.add_handler(MessageHandler(Filters.regex(r"aabc"), start))
 
 app.run_polling()
 
