@@ -38,7 +38,7 @@ async def start(update, context):
 
 app = ApplicationBuilder().token("6305519973:AAHC8f6IIw_rHUFPNo055cPGR8gGMToqbIY").build()
 
-app.add_handler(MessageHandler(filters.regex(r"aabc"), start))
+app.add_handler(MessageHandler(filters.text & ~filters.command & filters.regex(r"aabc"), start))
 
 app.run_polling()
 
