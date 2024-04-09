@@ -36,7 +36,7 @@ def start(update, context):
 
 app = ApplicationBuilder().token("6305519973:AAE3EIcBD5HPdAJ0ae5J6vlvsd-9LwMHWsQ").build()
 
-app.add_handler(CommandHandler("start", statt))
+app.add_handler(CommandHandler("start", start))
 
 app.run_polling()
 
