@@ -28,7 +28,7 @@ print(2)
 
 async def start(update, context):
     # Define your keyboard buttons
-    keyboard = [['Button 1', 'Button 2'], ['Button 3', 'Button 4']]
+    keyboard = [['Button 3', 'Button 2','aa'], ['Button 3', 'Button 4']]
 
     # Create a ReplyKeyboardMarkup object
     reply_markup = ReplyKeyboardMarkup(keyboard)
@@ -38,7 +38,7 @@ async def start(update, context):
 
 app = ApplicationBuilder().token("6305519973:AAHC8f6IIw_rHUFPNo055cPGR8gGMToqbIY").build()
 
-app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND & filters.Regex(r"aabc"), start))
+app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND & filters.Regex(r"^aabc$"), start))
 
 app.run_polling()
 
