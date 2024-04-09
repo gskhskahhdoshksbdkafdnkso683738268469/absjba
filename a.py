@@ -17,14 +17,16 @@ def aa():
 
 
 ax = Thread(target=aa)
+print(1)
 ax.start()
+print(2)
 
 #!/usr/bin/python
 
 # This is a simple echo bot using the decorator mechanism.
 # It echoes any incoming text messages.
 
-def start(update, context):
+async def start(update, context):
     # Define your keyboard buttons
     keyboard = [['Button 1', 'Button 2'], ['Button 3', 'Button 4']]
 
@@ -32,7 +34,7 @@ def start(update, context):
     reply_markup = ReplyKeyboardMarkup(keyboard)
 
     # Send a message with the keyboard
-    update.message.reply_text('Choose a button:', reply_markup=reply_markup)
+    await update.message.reply_text('Choose a button:', reply_markup=reply_markup)
 
 app = ApplicationBuilder().token("6305519973:AAE3EIcBD5HPdAJ0ae5J6vlvsd-9LwMHWsQ").build()
 
